@@ -16,8 +16,15 @@ print("Ahora veremos un bucle que muestra los números del 1 al 10:")
 for num in range(1, 11):
     print(f"El valor actual de num es: {num}")
 
+# Bucle for que recorre los números del 20 al 1
+for num2 in range(20, 1, -1):
+    print(f"El valor actual de num es: {num2}")
+
+
 # Definimos una lista de días laborables
 semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+
+print(f"El mejor día de la semana es: {semana[4]}")
 
 # Seleccionamos al azar un día de la semana
 dia = random.choice(semana)
