@@ -46,6 +46,12 @@ print(Ejemplo_matriz[2][2]) #Imprime: 9
 
 # Tarea
 # Crear una matriz de 4x4 y mostrar el número 16 en la terminal
+matriz_4x4 = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+]
 
 # 🔒 Tuplas: Tipo de datos inmutable (que no se puede modificar) 
 #y contiene un conjunto de distintos valores. Pueden contener 
@@ -59,24 +65,49 @@ print(perro[0]) #Imprime: Scooby Doo
 
 # diccionario_vacio = {}
 # persona = {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False}
-# persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
-# persona['hobbies'] = ['jugar videojuegos', 'programación'] 
+# JSON ---> es un tipo de dato que se utiliza
+# para almacenar información en un formato de texto plano.
+# Es muy utilizado en la web para intercambiar información
+# entre el cliente y el servidor
+
+persona = {
+    'nombre': 'Carmen',
+    'edad': 31, 'altura': 1.71,
+    'usa_lentes': False
+}
+persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
+persona['hobbies'] = ['jugar videojuegos', 'programación']
+#Incorporar dos nuevas llaves a persona. 
+# Profesión, comida favorita, mascotas, peliculas_favoritas. 
+
+persona['profesion'] = 'Psicología'
+persona['comida_favorita'] = 'Tiramisú'
+persona['mascotas'] = 'Gatos'
+persona['peliculas_favoritas'] = ['Demon Slayer Infinity Castle', 'Silent Hill Saga']
+
+#imprimir el diccionario completo
+print(persona)
 
 # # Agrega esa clave-valor si no existía previamente
 # print(persona)
 
 # # Imprime: {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False, 'hobbies': ['jugar videojuegos', 'programación']}
-# altura = persona.pop('altura')  # Elimina la clave indicada y devuelve el valor
-# print(altura)    # Imprime: 1.71
-# print(persona) 
+altura = persona.pop('altura')  # Elimina la clave indicada y devuelve el valor
+print(altura)    # Imprime: 1.71
+print(persona) 
 
 # # salida: {'nombre': 'Carmen', 'edad': 31, 'usa_lentes': False, 'hobbies': ['jugar videojuegos', 'programación']} 
 # ⚙️ Funciones comunes
-# En caso de no conocer el tipo de dato de una variable o valor, gracias a la función type podemos saberlo fácilmente. Por ejemplo:
+# En caso de no conocer el tipo de dato de una variable o valor, 
+# gracias a la función type podemos saberlo fácilmente. 
 
-# print(type(3.1416)) #Imprime: <class 'float'>
-# print(type(persona)) #Imprime <class 'dict'>
-# En tipos de datos que tienen tamaño (por ejemplo: listas, tuplas, diccionarios, cadenas), podemos usar la función len, que es diminutivo de length (tamaño en español) y que nos regresa la longitud de este.
+#Por ejemplo:
+print(type(3.1416)) #Imprime: <class 'float'>
+print(type(persona)) #Imprime <class 'dict'>
+# En tipos de datos que tienen tamaño
+# (por ejemplo: listas, tuplas, diccionarios, cadenas),
+# podemos usar la función len, que es diminutivo de 
+# length (tamaño en español) y que nos regresa la longitud de este.
 
-# print(len(persona)) #Imprime: 4 (la cantidad de pares de clave-valor)
-# print(len("Me encanta programar")) #Imprime: 20
+print(len(persona)) #Imprime: 8 (la cantidad de pares de clave-valor)
+print(len("Me encanta programar")) #Imprime: 20
